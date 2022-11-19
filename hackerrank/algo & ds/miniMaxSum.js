@@ -1,7 +1,6 @@
 // https://www.hackerrank.com/challenges/mini-max-sum/problem
 
 function miniMaxSum(arr) {
-  // Write your code here
   let sortedArr = arr.sort((a, b) => a - b)
 
   let minArr = [...sortedArr]
@@ -13,4 +12,15 @@ function miniMaxSum(arr) {
   console.log(
     [minArr, maxArr].map(arr => arr.reduce((a, b) => a + b)).join(' ')
   )
+}
+
+// Another Solution
+function miniMaxSum(arr) {
+  let sum = arr.reduce((acc, num) => acc + num)
+
+  let min = sum - Math.max(...arr)
+
+  let max = sum - Math.min(...arr)
+
+  console.log(`${min} ${max}`)
 }
