@@ -1,4 +1,5 @@
 // source: https://www.hackerrank.com/challenges/lonely-integer/problem
+
 function lonelyinteger(a) {
   let uniqValue = Object.entries(
     a.reduce((acc, num) => {
